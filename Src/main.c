@@ -104,7 +104,17 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+	  if (ledstate)
+	  		  	  {
+	  		  		  LL_GPIO_SetOutputPin(GPIOB, LL_GPIO_PIN_3);
+	  		  		  for(uint16_t i=0; i<0xFF00; i++){}
+	  		  		  LL_GPIO_ResetOutputPin(GPIOB, LL_GPIO_PIN_3);
+	  		  		  for(uint16_t i=0; i<0xFF00; i++){}
+	  		  	  }
+	  		  	  else
+	  		  	  {
+	  		  		  LL_GPIO_ResetOutputPin(GPIOB,LL_GPIO_PIN_3);
+	  		  	  }
 }
     /* USER CODE BEGIN 3 */
   /* USER CODE END 3 */

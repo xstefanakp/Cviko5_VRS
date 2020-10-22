@@ -46,8 +46,8 @@ cv5_prvy.bin \
 all: cv5_prvy.elf secondary-outputs
 
 # Tool invocations
-cv5_prvy.elf: $(OBJS) $(USER_OBJS) C:\Users\Peter\Desktop\cv5_prvy\STM32F303K8TX_FLASH.ld
-	arm-none-eabi-gcc -o "cv5_prvy.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Peter\Desktop\cv5_prvy\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv5_prvy.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+cv5_prvy.elf: $(OBJS) $(USER_OBJS) C:\Users\Peter\Documents\GitHub\Cviko5_VRS\STM32F303K8TX_FLASH.ld
+	arm-none-eabi-gcc -o "cv5_prvy.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Peter\Documents\GitHub\Cviko5_VRS\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cv5_prvy.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

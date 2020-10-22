@@ -76,6 +76,12 @@ void Error_Handler(void);
 #define BUTTON_EXTI_IRQn EXTI3_IRQn
 #define LEDKAAA_Pin LL_GPIO_PIN_3
 #define LEDKAAA_GPIO_Port GPIOB
+#define	TRIGGER_RISE					0
+#define	TRIGGER_FALL					1
+#define	BUTTON_EXTI_TRIGGER				TRIGGER_FALL
+#define	BUTTON_EXTI_SAMPLES_WINDOW		30
+#define	BUTTON_EXTI_SAMPLES_REQUIRED	20
+extern uint8_t ledstate;
 #ifndef NVIC_PRIORITYGROUP_0
 #define NVIC_PRIORITYGROUP_0         ((uint32_t)0x00000007) /*!< 0 bit  for pre-emption priority,
                                                                  4 bits for subpriority */
